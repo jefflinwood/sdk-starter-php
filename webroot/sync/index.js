@@ -19,7 +19,7 @@ $(function () {
   //In browser-based apps, every tab is like its own unique device
   //synchronizing state -- so we'll use a random UUID to identify
   //this tab.
-  $.getJSON('/token.php', {
+  $.getJSON('/token', {
     device: getDeviceId()
   }, function (tokenResponse) {
     //Initialize the Sync client

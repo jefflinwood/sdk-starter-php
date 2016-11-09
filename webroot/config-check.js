@@ -1,5 +1,5 @@
 $(function() {
-    $.get('/config-check.php', function(response) {
+    $.get('/config', function(response) {
         configureField(response, 'TWILIO_ACCOUNT_SID','twilioAccountSID',false);
         configureField(response, 'TWILIO_API_KEY','twilioAPIKey',false);
         configureField(response, 'TWILIO_API_SECRET','twilioAPISecret',true);
@@ -55,7 +55,7 @@ $(function() {
                 $('#' + elementId).html('Configured properly');
                 $('#' + elementId).addClass('set');
             } else {
-                $('#' + elementId).html('Not configured in config.php');
+                $('#' + elementId).html('Not configured in .env');
                 $('#' + elementId).addClass('unset');
             }
         } else {
@@ -63,7 +63,7 @@ $(function() {
                 $('#' + elementId).html(response[keyName]);
                 $('#' + elementId).addClass('set');
             } else {
-                $('#' + elementId).html('Not configured in config.php');
+                $('#' + elementId).html('Not configured in .env');
                 $('#' + elementId).addClass('unset');
             }
         }
