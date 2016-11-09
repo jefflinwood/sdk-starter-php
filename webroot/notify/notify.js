@@ -1,7 +1,7 @@
 $(function() {
 
     $('#sendNotificationButton').on('click', function() {
-        $.post('/send-notification.php', {
+        $.post('/send-notification', {
            identity: $('#identityInput').val()
         }, function(response) {
             $('#identityInput').val('');

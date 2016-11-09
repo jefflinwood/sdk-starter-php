@@ -1,5 +1,5 @@
 $(function() {
-    $.get('/config-check.php', function(response) {
+    $.get('/config', function(response) {
         configureField(response, 'TWILIO_ACCOUNT_SID','twilioAccountSID',false);
         configureField(response, 'TWILIO_API_KEY','twilioAPIKey',false);
         configureField(response, 'TWILIO_API_SECRET','twilioAPISecret',true);
